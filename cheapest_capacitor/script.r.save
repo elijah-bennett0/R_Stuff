@@ -1,0 +1,12 @@
+data <- read.csv("aluminum_electrolytic_capacitors.csv")
+
+#by(data$Price, data$Capacitance, min)
+
+#print(a[a$Mfr])
+
+for (item in data$Capacitance) {
+	c data[data$Capacitance == item,]
+	x <- cap1[cap1$Price == min(cap1$Price),]
+	out <- paste("Part Number: ", x$MfrPartNum, "\nPrice: ", cap1$Price, "\nCapacitance: ", item)
+	print(out)
+}
